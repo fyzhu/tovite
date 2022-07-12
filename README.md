@@ -4,4 +4,6 @@
 
 [掘金小册](https://s.juejin.cn/ds/2dPSFtU/)
 
-[vite中文网](https://vitejs.cn/)
+[vite 中文网](https://vitejs.cn/)
+
+[vite 仓库](https://github.com/vitejs/vite)
