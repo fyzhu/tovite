@@ -12,7 +12,7 @@
 
 
 #### 遇到的
-1. crypto
+1. crypto -> crypto-browserify 需要设置 `alias: {'crypto': 'crypto-browserify'}`     
 2. buffer
 3. events
 4. steam
@@ -25,7 +25,17 @@
 v4 会自动引入   
 v5 会给予提示，手动引入  
 [webpack5 新特性](https://www.jianshu.com/p/eacdd98d25b0)
-
+### global is undefined
+window.global = window
+### process is undefined
+```js
+export default defineConfig({
+  define: {
+    'process.env.NODE_DEBUG': 'false',
+    'process.env.NODE_ENV': '"production"'
+  }
+}
+```
 ## 课程
 
 [慕课课程](https://coding.imooc.com/class/523.html)
