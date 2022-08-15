@@ -1,14 +1,14 @@
 # Move to Vite
-## error
+## 常见报错
 ### node builtin
 `Module "xxx" has been externalized for browser compatibility. Cannot access "xxx" in client code.`
 
 #### 解决方案：
 
-1. 使用 polyfill 浏览器端版本，如：crypto -> crypto-browserify
+1. 使用 polyfill 浏览器端版本，如：crypto -> crypto-browserify [demo](https://github.com/vitejs/vite/discussions/4479)
 2. 使用对应的 browser 端 API，如：[crypto web api](https://developer.mozilla.org/en-US/docs/Web/API/Crypto)
 3. 如果使用第三方包，可以寻找替换包
-4. rollup-plugin-polyfill-node（rollup-plugin-node-polyfills） 部分支持，如：不支持 crypto.randomFillSync 方法
+4. rollup-plugin-polyfill-node（rollup-plugin-node-polyfills、rollup-plugin-node-builtins） 部分支持，如：不支持 crypto.randomFillSync 方法
 
 
 #### 遇到的
