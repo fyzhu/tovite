@@ -8,13 +8,17 @@
 1. 使用 polyfill 浏览器端版本，如：crypto -> crypto-browserify
 2. 使用对应的 browser 端 API，如：http -> fetch
 3. 如果使用第三方包，可以寻找替换包
-4. rollup-plugin-polyfill-node（rollup-plugin-node-polyfills） 部分支持
+4. rollup-plugin-polyfill-node（rollup-plugin-node-polyfills） 部分支持，如：不支持 crypto.randomFillSync 方法
 
 
 #### 遇到的
 1. crypto
 2. buffer
 3. events
+4. steam
+5. util
+
+
 #### webpack 是如何解决的
 
 `node-libs-browser`  
