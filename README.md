@@ -19,7 +19,7 @@
 
 `node-libs-browser`  
 v4 会自动引入   
-v5 会给予提示，手动引入 
+v5 会给予提示，手动引入  
 [webpack5 新特性](https://www.jianshu.com/p/eacdd98d25b0)
 
 ## 课程
