@@ -1,6 +1,6 @@
 # Move to Vite
 ## 常见报错
-### node builtin
+### 1.node builtin
 `Module "xxx" has been externalized for browser compatibility. Cannot access "xxx" in client code.`
 
 #### 解决方案：
@@ -25,9 +25,11 @@
 v4 会自动引入   
 v5 会给予提示，手动引入  
 [webpack5 新特性](https://www.jianshu.com/p/eacdd98d25b0)
-### global is undefined
+
+### 2.global is undefined
 window.global = window
-### process is undefined
+
+### 3.process is undefined
 ```js
 export default defineConfig({
   define: {
@@ -35,6 +37,22 @@ export default defineConfig({
     'process.env.NODE_ENV': '"production"'
   }
 }
+```
+### 4.URI malformed
+删除 index.html 里的不规则 URL，如： `<%= BASE_URL %>`
+
+### 5.公共 sass 引入
+```
+css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/scss/variable.scss";
+          @import "@/assets/scss/mixin.scss";
+        `
+      }
+    }
+  }
 ```
 ## 课程
 
