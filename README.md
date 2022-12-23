@@ -25,6 +25,27 @@ define: {
     APP_NAME: '"h5offline"',
   },
 ```
+
+### proxy & port & fs
+```js
+server: {
+    port: 80,
+    proxy: {
+      '/dyn': {
+        target: 'http://umapopenapi-dev.jd.com:8888/',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/dyn': ''
+        }
+      },
+    }
+    // fs: {
+    //   // Allow serving files from one level up to the project root
+    //   allow: ['..'] // 允许处理 joyer-components 里的图片等静态资源
+    // }
+  },
+```
 ## 常见报错
 ### 1.node builtin
 `Module "xxx" has been externalized for browser compatibility. Cannot access "xxx" in client code.`
