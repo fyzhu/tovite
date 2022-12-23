@@ -94,7 +94,15 @@ css: {
   }
 ```
 ### 6. require('图片')
+```js
+plugins: [
 
+    vitePluginRequire({
+      // fileRegex: /.js$/,
+      fileRegex: /.js$|.vue$/ // 处理 js/vue 文件里的 require('./xxx.jpg')
+    }),
+  ],
+```
 ## 课程
 
 [慕课课程](https://coding.imooc.com/class/523.html)
