@@ -7,16 +7,9 @@ pnpm i vite-plugin-vue2 -D
 ### alias
 ```js
 resolve: {
-    alias: [
-      {
-        find: '@/',
-        replacement: REPLACEMENT,
-      },
-      // {
-      //   find: 'src/',
-      //   replacement: REPLACEMENT,
-      // },
-    ],
+    alias: {
+        "@": path.resolve(__dirname, "src"),
+    }
   },
 ```
 ### define
@@ -44,6 +37,7 @@ server: {
     // }
   },
 ```
+
 ## 常见报错
 ### 1.node builtin
 `Module "xxx" has been externalized for browser compatibility. Cannot access "xxx" in client code.`
@@ -99,6 +93,8 @@ css: {
     }
   }
 ```
+### 6. require('图片')
+
 ## 课程
 
 [慕课课程](https://coding.imooc.com/class/523.html)
