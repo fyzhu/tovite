@@ -35,9 +35,7 @@ server: {
         target: 'http://umapopenapi-dev.jd.com:8888/',
         secure: false,
         changeOrigin: true,
-        pathRewrite: {
-          '^/dyn': ''
-        }
+        rewrite: (path) => path.replace(/^\/dyn/, '')
       },
     }
     // fs: {
