@@ -1,4 +1,30 @@
 # Move to Vite
+## 常用配置
+### vue2
+```bash
+pnpm i vite-plugin-vue2 -D
+```
+### alias
+```js
+resolve: {
+    alias: [
+      {
+        find: '@/',
+        replacement: REPLACEMENT,
+      },
+      // {
+      //   find: 'src/',
+      //   replacement: REPLACEMENT,
+      // },
+    ],
+  },
+```
+### define
+```js
+define: {
+    APP_NAME: '"h5offline"',
+  },
+```
 ## 常见报错
 ### 1.node builtin
 `Module "xxx" has been externalized for browser compatibility. Cannot access "xxx" in client code.`
