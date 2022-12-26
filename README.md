@@ -19,17 +19,21 @@ define: {
   },
 ```
 
-### proxy & port & fs
+### proxy & port & fs & cors
 ```js
 server: {
     port: 80,
     proxy: {
       '/dyn': {
-        target: 'http://umapopenapi-dev.jd.com:8888/',
+        target: 'http://xxx.com:8888/',
         secure: false,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/dyn/, '')
       },
+    },
+    cors: {
+      origin: ['http://xxx.com'],
+      credentials: true
     }
     // fs: {
     //   // Allow serving files from one level up to the project root
@@ -95,8 +99,8 @@ css: {
 ```
 ### 6. require('图片')
 ```js
+import vitePluginRequire from "vite-plugin-require";
 plugins: [
-
     vitePluginRequire({
       // fileRegex: /.js$/,
       fileRegex: /.js$|.vue$/ // 处理 js/vue 文件里的 require('./xxx.jpg')
