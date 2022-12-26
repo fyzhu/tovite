@@ -6,7 +6,15 @@
 ## 常用配置
 ### vue2
 ```bash
-pnpm i vite-plugin-vue2 -D
+pnpm i @vitejs/plugin-vue2 -D
+```
+```js
+// vite.config.js
+import vue from '@vitejs/plugin-vue2'
+
+export default {
+  plugins: [vue()]
+}
 ```
 ### alias
 ```js
