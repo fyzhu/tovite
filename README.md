@@ -1,8 +1,31 @@
 # Move to Vite
 ## 注意事项
-#### 后缀不能省略
+### 后缀不能省略
 .vue 后缀不能省略  
 /index.vue 后缀不能省略
+### 公共 sass 引入
+```
+css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/scss/variable.scss";
+          @import "@/assets/scss/mixin.scss";
+        `
+      }
+    }
+  }
+```
+###  require('图片')
+```js
+import vitePluginRequire from "vite-plugin-require";
+plugins: [
+    vitePluginRequire({
+      // fileRegex: /.js$/,
+      fileRegex: /.js$|.vue$/ // 处理 js/vue 文件里的 require('./xxx.jpg')
+    }),
+  ],
+```
 ## 常用配置
 ### vue2
 ```bash
@@ -96,29 +119,7 @@ export default defineConfig({
 ### 4.URI malformed
 删除 index.html 里的不规则 URL，如： `<%= BASE_URL %>`
 
-### 5.公共 sass 引入
-```
-css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "@/assets/scss/variable.scss";
-          @import "@/assets/scss/mixin.scss";
-        `
-      }
-    }
-  }
-```
-### 6. require('图片')
-```js
-import vitePluginRequire from "vite-plugin-require";
-plugins: [
-    vitePluginRequire({
-      // fileRegex: /.js$/,
-      fileRegex: /.js$|.vue$/ // 处理 js/vue 文件里的 require('./xxx.jpg')
-    }),
-  ],
-```
+
 ## 课程
 
 [慕课课程](https://coding.imooc.com/class/523.html)
