@@ -1,4 +1,8 @@
 # Move to Vite
+## 注意事项
+#### 后缀不能省略
+.vue 后缀不能省略  
+/index.vue 后缀不能省略
 ## 常用配置
 ### vue2
 ```bash
