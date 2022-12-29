@@ -17,14 +17,9 @@ css: {
   }
 ```
 ###  require('图片')
+更换为 import
 ```js
-import vitePluginRequire from "vite-plugin-require";
-plugins: [
-    vitePluginRequire({
-      // fileRegex: /.js$/,
-      fileRegex: /.js$|.vue$/ // 处理 js/vue 文件里的 require('./xxx.jpg')
-    }),
-  ],
+import imgUrl from './img.png'
 ```
 ## 常用配置
 ### vue2
