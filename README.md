@@ -21,7 +21,7 @@ css: {
 ```js
 import imgUrl from './img.png'
 ```
-## 常用配置
+## 常用插件
 ### vue2
 ```bash
 pnpm i @vitejs/plugin-vue2 -D
@@ -34,6 +34,24 @@ export default {
   plugins: [vue()]
 }
 ```
+### 兼容低端浏览器
+```bash
+pnpm i @vitejs/plugin-legacy -D
+```
+```js
+// vite.config.js
+import legacy from '@vitejs/plugin-legacy'
+
+export default {
+  plugins: [
+    legacy({
+      targets: ['defaults', 'not IE 11'],
+    }),
+  ],
+}
+```
+## 常用配置
+
 ### alias
 ```js
 resolve: {
