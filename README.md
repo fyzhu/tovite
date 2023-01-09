@@ -121,6 +121,8 @@ v5 会给予提示，手动引入
 window.global = window
 
 ### 3.process is undefined
+1. https://vitejs.dev/guide/env-and-mode.html#env-files
+2. define
 ```js
 export default defineConfig({
   define: {
