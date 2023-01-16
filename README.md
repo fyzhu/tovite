@@ -141,6 +141,6 @@ export default defineConfig({
 
 [掘金小册](https://s.juejin.cn/ds/2dPSFtU/)
 
-[vite 文档](https://vitejs.cn/)
-
 [vite 仓库](https://github.com/vitejs/vite)
+
+[vite 官方文档](https://cn.vitejs.dev/)
